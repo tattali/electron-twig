@@ -10,7 +10,7 @@ npm install electron-twig
 ```
 
 ## Usage
-Just initialize this module with [Twig](https://www.npmjs.com/package/twig) package trougth `electron-twig`:
+Just initialize this module with [Twig](https://www.npmjs.com/package/twig) package through `electron-twig`:
 
 ```js
 const {app, BrowserWindow} = require('electron')

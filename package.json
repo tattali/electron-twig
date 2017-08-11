@@ -1,6 +1,6 @@
 {
   "name": "electron-twig",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Electron module to render Twig templates",
   "homepage": "https://github.com/tattali/electron-twig",
   "main": "index.js",
