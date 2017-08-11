@@ -1,7 +1,8 @@
 {
   "name": "electron-twig",
   "version": "1.0.0",
-  "description": "",
+  "description": "Electron module to render Twig templates",
+  "homepage": "https://github.com/tattali/electron-twig",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -9,13 +10,15 @@
   },
   "keywords": [
     "electron",
-    "node",
     "twig"
   ],
-  "author": "Théo Attali <theoattali@gmail.com>",
+  "author": {
+    "name": "Théo Attali",
+    "email": "theoattali@gmail.com"
+  },
   "license": "MIT",
   "dependencies": {
-    "mime": "^1.3.4",
+    "mime": "^1.3.6",
     "twig": "^1.10.5"
   }
 }
