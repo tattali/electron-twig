@@ -20,14 +20,6 @@ const getPath = url => {
   return result;
 }
 
-const interceptCB = error => {
-  if (!error) {
-    console.log('Twig interceptor registered successfully');
-  } else {
-    console.error('Twig interceptor failed:', error);
-  }
-}
-
 app.on('ready', () => {
   protocol.interceptBufferProtocol('file', (request, callback) => {
     let file = getPath(request.url);
@@ -62,6 +54,6 @@ app.on('ready', () => {
       return callback(2);
     }
   }, (error) => {
-    if (!error) console.error('Failed to register protocol')
+    if (error) console.error('Failed to intercept protocol')
   })
 })
