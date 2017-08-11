@@ -3,7 +3,7 @@ This module is a simple `file` protocol interceptor for [electron](https://githu
 
 It's inspired by [yan-foto/electron-pug](https://github.com/yan-foto/electron-pug)
 
-<!--# Installation
+# Installation
 
 ```
 npm install electron-twig
@@ -24,4 +24,3 @@ app.on('ready', () => {
   // etc.
 })
 ```
--->
