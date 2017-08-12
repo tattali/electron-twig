@@ -1,7 +1,11 @@
-# electron twig
-This module is a simple `file` protocol interceptor for [electron](https://github.com/atom/electron) which compiles all (local) URLs to files with `.twig` extension.
+# Electron Twig
+[![npm version](https://badge.fury.io/js/electron-twig.svg)](https://www.npmjs.com/package/electron-twig)
+[![npm](https://img.shields.io/npm/dt/electron-twig.svg?maxAge=2592000)](https://www.npmjs.com/package/electron-twig)
+[![Dependency Status](https://david-dm.org/tattali/electron-twig.svg)](https://david-dm.org/tattali/electron-twig)
 
-It's inspired by [yan-foto/electron-pug](https://github.com/yan-foto/electron-pug)
+Get [Twig.js](https://github.com/twigjs/twig.js) the JS implementation of the Twig Templating Language
+
+This package is a simple `file` protocol interceptor for [electron](https://github.com/atom/electron) which compiles files with `.twig` extension.
 
 ## Installation
 
@@ -10,8 +14,6 @@ npm install electron-twig
 ```
 
 ## Usage
-Just initialize this module with [Twig](https://www.npmjs.com/package/twig) package through `electron-twig`:
-
 ```js
 const {app, BrowserWindow} = require('electron')
 const twig                 = require('electron-twig')
