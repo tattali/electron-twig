@@ -1,7 +1,7 @@
 # Electron Twig
-[![npm version](https://badge.fury.io/js/electron-twig.svg)](https://www.npmjs.com/package/electron-twig)
+[![npm](https://img.shields.io/npm/v/electron-twig.svg)](https://www.npmjs.com/package/electron-twig)
 [![npm](https://img.shields.io/npm/dt/electron-twig.svg?maxAge=2592000)](https://www.npmjs.com/package/electron-twig)
-[![Dependency Status](https://david-dm.org/tattali/electron-twig.svg)](https://david-dm.org/tattali/electron-twig)
+[![David](https://img.shields.io/david/tattali/electron-twig.svg)](https://www.npmjs.com/package/electron-twig)
 
 Get [Twig.js](https://github.com/twigjs/twig.js) the JS implementation of the Twig Templating Language
 
