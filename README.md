@@ -3,7 +3,7 @@
 [![npm](https://img.shields.io/npm/dt/electron-twig.svg)](https://www.npmjs.com/package/electron-twig)
 [![David](https://img.shields.io/david/tattali/electron-twig.svg)](https://www.npmjs.com/package/electron-twig)
 
-Get [Twig.js](https://github.com/twigjs/twig.js) the JS implementation of the Twig Templating Language
+Get [Twig.js](https://github.com/twigjs/twig.js) the JS implementation of the Twig Templating Language on [electron](https://github.com/atom/electron) projects.
 
 This package is a simple `file` protocol interceptor for [electron](https://github.com/atom/electron) which compiles files with `.twig` extension.
 
