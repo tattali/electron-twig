@@ -5,7 +5,7 @@
 
 Get [Twig.js](https://github.com/twigjs/twig.js) the JS implementation of the Twig Templating Language on [electron](https://github.com/atom/electron) projects.
 
-This package is a simple `file` protocol interceptor for [electron](https://github.com/atom/electron) which compiles files with `.twig` extension.
+This package is a simple `file protocol` interceptor which compiles files with `.twig` extension.
 
 ## Installation
 
@@ -14,6 +14,7 @@ npm install electron-twig
 ```
 
 ## Usage
+
 ```js
 const {app, BrowserWindow} = require('electron')
 const twig                 = require('electron-twig')
@@ -21,7 +22,25 @@ const twig                 = require('electron-twig')
 app.on('ready', () => {
   let win = new BrowserWindow({width: 800, height: 600})
 
-  win.loadURL(`file://${__dirname}/view/index.html.twig`)
+  win.loadURL(`file://${__dirname}/views/index.html.twig`)
+
+  // etc.
+})
+```
+
+Put variables in template
+
+```js
+const {app, BrowserWindow} = require('electron')
+const twig                 = require('electron-twig')
+
+app.on('ready', () => {
+  let win = new BrowserWindow({width: 800, height: 600})
+
+  win.loadURL(`file://${__dirname}/views/index.html.twig`)
+  twig.view({
+    foo: 'bar'
+  })
 
   // etc.
 })

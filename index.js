@@ -22,6 +22,10 @@ const getPath = url => {
 
 app.on('ready', () => {
   protocol.interceptBufferProtocol('file', (request, callback) => {
+    let twigOptions = {}
+    if (typeof module.exports.view !== 'undefined') {
+      twigOptions = module.exports.view
+    }
     let file = getPath(request.url);
 
     // See if file actually exists
@@ -30,7 +34,7 @@ app.on('ready', () => {
 
       let ext = path.extname(file);
       if (ext === '.twig') {
-        twig.renderFile(file, {}, (err, html) => {
+        twig.renderFile(file, twigOptions, (err, html) => {
           return callback({data: new Buffer(html), mimeType:'text/html'});
         })
       } else {
@@ -46,14 +50,15 @@ app.on('ready', () => {
       // https://code.google.com/p/chromium/codesearch#chromium/src/net/base/net_error_list.h
       if (e.code === 'ENOENT') {
        // NET_ERROR(FILE_NOT_FOUND, -6)
-       return callback(6);
+       return callback(-6);
       }
 
       // All other possible errors return a generic failure
       // NET_ERROR(FAILED, -2)
-      return callback(2);
+      return callback(-2);
     }
   }, (error) => {
     if (error) console.error('Failed to intercept protocol')
   })
 })
+
