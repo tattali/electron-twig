@@ -5,7 +5,7 @@
 
 Get [Twig.js](https://github.com/twigjs/twig.js) the JS implementation of the Twig Templating Language on [electron](https://github.com/atom/electron) projects.
 
-This package is a simple `file protocol` interceptor which compiles files with `.twig` extension.
+This package is a simple `file protocol interceptor` which compiles files with `.twig` extension.
 
 ## Installation
 
