@@ -45,3 +45,38 @@ app.on('ready', () => {
   // etc.
 })
 ```
+
+If you have an error like that :
+```
+you are using twig.js in sync mode in combination with async extensions
+```
+
+You have to use the async version.
+
+
+For async version add a variable `is_async: true`
+
+```js
+const {app, BrowserWindow} = require('electron')
+const twig                 = require('electron-twig')
+
+app.on('ready', () => {
+  let win = new BrowserWindow({width: 800, height: 600})
+
+  new Promise(function(resolve, reject) {
+    setTimeout(function() {
+      resolve();
+    }, 300);
+  }).then(() => {
+
+    win.loadURL(`file://${__dirname}/views/index.html.twig`)
+    twig.view = {
+      foo: 'bar',
+      is_async: true
+    }
+
+  });
+
+  // etc.
+})
+```
