@@ -34,10 +34,21 @@ app.on('ready', () => {
 
       let ext = path.extname(file);
       if (ext === '.twig') {
+
+        if(twigOptions !== undefined && twigOptions.is_async)
+        {
+            twigOptions.settings = [];
+            twigOptions.settings['twig options'] = {};
+            twigOptions.settings['twig options'].allow_async = true;
+        }
+
         twig.renderFile(file, twigOptions, (err, html) => {
-          return callback({data: new Buffer(html), mimeType:'text/html'});
-        })
-      } else {
+            return callback({data: new Buffer(html), mimeType:'text/html'});
+        });
+
+      }
+      else
+      {
         return callback({data: content, mimeType: mime.lookup(ext)});
       }
     } catch (e) {
